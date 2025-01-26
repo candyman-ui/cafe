@@ -2,6 +2,21 @@
 import mysql.connector
 import datetime
 
+# Establishing the connection
+connection = mysql.connector.connect(
+    host="localhost",       # Replace with your database host
+    user="your_username",   # Your MySQL username
+    password="your_password",  # Your MySQL password
+    database="your_database"   # Database name (optional)
+)
+
+# Check if the connection is successful
+if connection.is_connected():
+    print("Connected to the database")
+
+# Close the connection
+connection.close()
+
 #this is the intro pageish thing for cafe
 print("              Cafe Management System                 ")
 print("--------------------wellcome-------------------------")
